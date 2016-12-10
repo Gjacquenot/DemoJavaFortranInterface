@@ -1,0 +1,10 @@
+package demoJna;
+
+public class demo {
+
+    public static void main(String[] args) {
+
+        FortranInterface.LECT.readingADoubleFromAFile();
+
+    }
+}

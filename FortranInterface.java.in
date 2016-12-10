@@ -1,0 +1,11 @@
+package demoJna;
+
+import com.sun.jna.Library;
+import com.sun.jna.Native;
+
+public interface FortranInterface extends Library {
+
+    public final static FortranInterface LECT = (FortranInterface) Native.loadLibrary("LIBRARYFULLPATH/libmyfortran.so", FortranInterface.class);
+
+    public void readingADoubleFromAFile();
+}
