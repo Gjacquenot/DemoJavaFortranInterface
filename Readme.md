@@ -6,6 +6,7 @@ It is a minimal example to show how to interface a Fortran library with a Java c
 
 It uses the [JNA](https://github.com/java-native-access/jna) to load the shared Fortran library.
 
+In certain cases, it also exposes a bug that is detailled [here](http://stackoverflow.com/questions/25080660/cant-read-a-decimal-number-in-a-file-using-jna). With some gfortran versions, this test does not work as expected: this Java demo calls the reading of a number from a Fortran library. Instead of returning the floating point number, it returns the integer part of the floating point number: e.g. one wants to read `2.3` and we get `2.0`. Used separately, the Fortran library works fine.
 
 # Running
 
