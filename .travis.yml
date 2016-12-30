@@ -6,16 +6,13 @@ matrix:
   include:
     - os: linux
       compiler: clang
-      env: BTYPE=RelWithDebInfo
+      env: BTYPE=Release
     - os: linux
       compiler: gcc
       env: BTYPE=Release
-    - os: linux
-      compiler: clang
-      env: BTYPE=Debug
     - os: osx
-      compiler: clang
-      env: BTYPE=RelWithDebInfo
+      compiler: gcc
+      env: BTYPE=Release
 
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get --yes update; fi
