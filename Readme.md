@@ -1,5 +1,7 @@
 # DemoJavaFortranInterface
 
+[![Travis][buildstatus_image_travis]][travisci]
+
 It is a minimal example to show how to interface a Fortran library with a Java code.
 
 It uses the [JNA](https://github.com/java-native-access/jna) to load the shared Fortran library.
@@ -33,3 +35,6 @@ The demo is run by calling `make`, that will perform all the required operations
     START READING
     2.2999999999999998
     END READING
+
+[buildstatus_image_travis]: https://travis-ci.org/Gjacquenot/DemoJavaFortranInterface.svg?branch=master
+[travisci]: https://travis-ci.org/Gjacquenot/DemoJavaFortranInterface
