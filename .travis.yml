@@ -22,6 +22,6 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get --yes install gfortran; fi
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install gcc; fi
 
-install:
+script:
   # Build
   - make
