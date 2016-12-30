@@ -6,16 +6,14 @@ CONTAINS
 
 SUBROUTINE readingADoubleFromAFile()  BIND(C,name="readingADoubleFromAFile")
       DOUBLE PRECISION VALDOUBLE
-
       INTEGER IFILE
       PARAMETER(IFILE=1)
-      WRITE(*,*)'START READING'
-      OPEN(UNIT=1,FILE='FULLPATH/data.txt')
+      WRITE(*,*) 'START READING'
+      OPEN(UNIT=1, FILE='FULLPATH/data.txt')
       READ(IFILE,*) VALDOUBLE
-      WRITE(*,*)VALDOUBLE
+      WRITE(*,*) VALDOUBLE
       CLOSE(UNIT=1)
-      WRITE(*,*)'END READING'
-
+      WRITE(*,*) 'END READING'
 END SUBROUTINE
 
 END MODULE test
